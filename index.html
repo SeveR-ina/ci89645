@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Главная страница </title>
+    <link rel='stylesheet' type='text/css' href='style.css'/>
+</head>
+<body>
+<h2> Заметки пользователя </h2>
+<select id='list' title="Список заметок"></select>
+<button title="Создать" onclick="addNote()"> Новая заметка</button>
+<img src="help-icon.png" id="help" title="Справка"
+     onclick="alert('Создавайте новые заметки по нажатию на кнопку либо измените текст уже существующих заметок')"> </img>
+<br>
+<textarea id="currentnote" style="width: 100%; height: 10em" title="Введите текст заметки">
+</textarea>
+<hr>
+<a title="Перейти" href="gb.php"> Гостевая книга </a>
+<script charset="UTF-8" src="notes.js"></script>
+</body>
+</html>
