@@ -1,5 +1,5 @@
-charset="UTF-8";
 var list = document.querySelector("#list");
+
 function addToList(name) {
     var option = document.createElement("option");
     option.textContent = name;
@@ -8,6 +8,7 @@ function addToList(name) {
 
 var notes = JSON.parse(localStorage.getItem("notes")) ||
     {"что купить": ""};
+
 for (var name in notes)
     if (notes.hasOwnProperty(name))
         addToList(name);
@@ -19,10 +20,11 @@ function saveToStorage() {
 var current = document.querySelector("#currentnote");
 current.value = notes[list.value];
 
-list.addEventListener("change", function() {
+list.addEventListener("change", function () {
     current.value = notes[list.value];
 });
-current.addEventListener("change", function() {
+
+current.addEventListener("change", function () {
     notes[list.value] = current.value;
     saveToStorage();
 });

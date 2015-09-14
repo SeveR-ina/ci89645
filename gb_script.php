@@ -1,10 +1,10 @@
 <?php
-$name=$_POST['name'];
-$email=$_POST['email'];
-$message=$_POST['message'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
 $db_host = 'localhost';
-$db_user = 'ci89645_777'; 
+$db_user = 'ci89645_777';
 $db_password = 'I1VDKDB6';
 $database = 'ci89645_777';
 
@@ -19,9 +19,9 @@ mysql_query("CREATE TABLE IF NOT EXISTS gb
               `message` text,
               PRIMARY KEY  (`id`) )
               ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6849")
-              or die(mysql_error());
+or die(mysql_error());
 
-$query="INSERT INTO `gb`
+$query = "INSERT INTO `gb`
         (`id`, `date`, `name`, `email`, `message`)
         VALUES ('', NOW(), '$name', '$email', '$message')";
 $result = mysql_query($query);
